@@ -1,0 +1,7 @@
+{
+  "name": "sd-card-library",
+  "author": "Daniel Sullivan <mumblepins@gmail.com>",
+  "license": "GPL v3",
+  "version": "0.0.1",
+  "description": "SD Card Library (forked from https://github.com/technobly/SparkCore-SD)"
+}

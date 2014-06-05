@@ -14,9 +14,10 @@
 #ifndef __SD_H__
 #define __SD_H__
 
-#include <Application.h>
-#include <SdFat.h>
-#include <SdFatUtil.h>
+#include "application.h"
+#include "SdFat.h"
+#include "SdFatUtil.h"
+
 
 #define FILE_READ O_READ
 #define FILE_WRITE (O_READ | O_WRITE | O_CREAT)

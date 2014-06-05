@@ -23,8 +23,8 @@
  * \file
  * Useful utility functions.
  */
-#include <Application.h>
-#include <Sd2Card.h>
+#include "application.h"
+#include "Sd2Card.h"
 //#include <string.h>
 /*
 #ifndef PSTR
