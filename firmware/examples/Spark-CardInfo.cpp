@@ -20,7 +20,7 @@
  // include the SD library:
 
 #include "application.h"
-#include "SD.h"
+#include "sd-card-library/sd-card-library.h"
 
 // set up variables using the SD utility library functions:
 Sd2Card card;

@@ -19,7 +19,7 @@
  */
 
 #include "application.h"
-#include "Sd2Card.h"
+#include "sd2-card.h"
 
 //#include "spark_wiring_spi.h"
 //#include "spark_wiring_usbserial.h"

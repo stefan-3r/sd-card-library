@@ -1,6 +1,5 @@
-#ifndef __SD2CARD_CONFIG_H__
-#define __SD2CARD_CONFIG_H__
-
+#ifndef _SD2_CARD_CONFIG
+#define _SD2_CARD_CONFIG
 #include "application.h"
 //#include "spark_wiring.h"
 

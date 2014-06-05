@@ -20,7 +20,7 @@
  */
 
 #include "application.h"
-#include "SD.h"
+#include "sd-card-library/sd-card-library.h"
 
 File myFile;
 

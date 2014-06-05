@@ -11,12 +11,12 @@
  (C) Copyright 2010 SparkFun Electronics
 
  */
-#ifndef __SD_H__
-#define __SD_H__
+#ifndef _SD_CARD_LIBRARY
+#define _SD_CARD_LIBRARY
 
 #include "application.h"
-#include "SdFat.h"
-#include "SdFatUtil.h"
+#include "sd-fat.h"
+#include "sd-fat-util.h"
 
 
 #define FILE_READ O_READ

@@ -2,8 +2,8 @@
  * This sketch is a simple write/read benchmark.
  */
 #include "application.h"
-#include <SdFat.h>
-#include <SdFatUtil.h>
+#include "sd-card-library/sd-fat.h"
+#include "sd-card-library/sd-fat-util.h"
 
 #define FILE_SIZE_MB 5
 #define FILE_SIZE (1000000UL*FILE_SIZE_MB)
