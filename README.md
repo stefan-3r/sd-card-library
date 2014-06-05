@@ -1,5 +1,7 @@
 SparkCore-SD
 ============
+Web IDE library V0.0.1
+Forked from https://github.com/technobly/SparkCore-SD by Daniel Sullivan (mumblepins)
 
 An Implementation of the Arduino/Sparkfun SD Card Library for the Spark Core
 
