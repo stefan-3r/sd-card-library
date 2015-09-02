@@ -20,7 +20,7 @@
  */
 
 #include "application.h"
-#include "sd-card-library/sd-card-library.h"
+#include "sd-card-library/sd-card-library-photon-compat.h"
 
 File myFile;
 

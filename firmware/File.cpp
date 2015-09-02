@@ -12,7 +12,7 @@
 
  */
 
-#include "sd-card-library.h"
+#include "sd-card-library-photon-compat.h"
 //#include <malloc.h>
 //#include <string.h>
 
