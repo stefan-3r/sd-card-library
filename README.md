@@ -1,7 +1,7 @@
-SparkPhoton-SD
-==============
+SD Card Library Photon Compat
+===
 Web IDE library V0.0.1
-Forked from https://github.com/technobly/SparkCore-SD by Daniel Sullivan (mumblepins). This fork was edited following the instructions in this forum post solution.
+Forked from https://github.com/technobly/SparkCore-SD by Daniel Sullivan (mumblepins). This fork was edited following the instructions in [this forum post solution](https://community.particle.io/t/photon-and-sd-card-library-error/14707).
 
 An Implementation of the Arduino/Sparkfun SD Card Library for the Photon Core.
 
