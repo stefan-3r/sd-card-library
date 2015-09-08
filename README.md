@@ -1,26 +1,37 @@
 SD Card Library Photon Compat
 ===
-Web IDE library V0.0.1
-Forked from https://github.com/technobly/SparkCore-SD by Daniel Sullivan (mumblepins). This fork was edited following the instructions in [this forum post solution](https://community.particle.io/t/photon-and-sd-card-library-error/14707).
 
-An Implementation of the Arduino/Sparkfun SD Card Library for the Photon Core.
+An Implementation of the Arduino/Sparkfun SD Card Library for the Particle Photon.
 
-![example](http://i.imgur.com/A3Au1B1.jpg)
+This library is a fork of the [Spark Core SD library](https://github.com/mumblepins/sd-card-library). The code has been modified so that it will compile for the Particle Photon by following these instructions in [this forum post solution](https://community.particle.io/t/photon-and-sd-card-library-error/14707).
 
-![example](http://i.imgur.com/aiMlHky.png)
+## Pin Diagram
 
-![pinout](http://i.imgur.com/JgpmcWO.png)
+In my circuits I use Adafruit's microSD card breakout board so I've included both sets of pin configurations.
 
-If you are building locally, place the files here:
+### SD Card Pin Diagram
 
-```cpp
-// put the entire 'libraries' folder and everything in it here
+![](http://i.imgur.com/G78juSt.png)
 
-..\core-firmware\libraries 
+### Adafruit MicroSD Breakout
 
-// rename one of the example apps located at ..\libraries\sd\examples\
-// to application.cpp and place it here
+![](http://i.imgur.com/No8R6UP.jpg)
 
-..\core-firmware\src\application.cpp
-```
-Thanks to [@choosatron](http://www.choosatron.com) for your work on this!
+### Pin Connection Table
+
+Blank cells indicate that you ought to configure you hardware and softwae to use the functionality they match to (card detect and 5V). Card detect is not supported by 'naked' SD cards, but is supported on the breakout board.
+
+| SD Card | Breakout  | Photon  |
+|---      |---        |---      |
+| n/a     | CD        |         |
+| SS      | CS        | A2      |
+| MOSI    | DI        | A5      |
+| MISO    | DO        | A4      |
+| SCK     | CLK       | A3      |
+| GND     | GND       | GND     |
+| VCC     | 3V        | 3V      |
+| n/a     | 5V        |         |
+
+### My own circuit
+
+![](https://i.imgur.com/U36RW3n.jpg)
