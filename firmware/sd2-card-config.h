@@ -3,7 +3,7 @@
 #include "application.h"
 //#include "spark_wiring.h"
 
-#define SD_SPI_NUMBER	2					/* Specify HardwareSPI number */
+#define SD_SPI_NUMBER	1					/* Specify HardwareSPI number */
 
 /* For Maple families, Maple rev5, etc */
 #	define SD_CHIP_SELECT_PIN	A2			/* for Spark Core SPI CS pin */
