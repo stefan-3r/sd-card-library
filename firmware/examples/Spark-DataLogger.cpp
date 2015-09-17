@@ -70,11 +70,11 @@ void loop()
   for (int analogPin = 0; analogPin < 2; analogPin++) {
     int sensor = analogRead(analogPin);
     //dataString += String(sensor);
-  sprintf(sdata, "%d", sensor );
-  strcat( dataString, sdata);
+    sprintf(sdata, "%d", sensor );
+    strcat( dataString, sdata);
     if (analogPin == 0) {
       //dataString += ",";
-    strcat( dataString, ",");
+      strcat( dataString, ",");
     }
   }
 
