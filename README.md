@@ -34,4 +34,6 @@ Blank cells indicate that you ought to configure you hardware and softwae to use
 
 ### My own circuit
 
-![](https://i.imgur.com/U36RW3n.jpg)
+I've got a potentiometer wired in A0 in this circuit. Not this has no impact on the SD card and is specific to my project.
+
+![](http://i.imgur.com/eJ8RQj7.jpg)
