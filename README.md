@@ -34,4 +34,4 @@ Blank cells indicate that you ought to configure you hardware and softwae to use
 
 ### My own circuit
 
-![](https://i.imgur.com/U36RW3n.jpg)
+![](http://i.imgur.com/eJ8RQj7.jpg)
