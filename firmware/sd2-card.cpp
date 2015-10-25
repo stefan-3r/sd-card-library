@@ -261,8 +261,8 @@ uint8_t Sd2Card::init() {
     //init DMA
     dma_init(DMA1);
     //enable SPI over DMA
-    spi_rx_dma_enable(SPI1);
-    spi_tx_dma_enable(SPI1);
+    spi_rx_dma_enable(SPI3);
+    spi_tx_dma_enable(SPI3);
     //DMA activity control
     dmaActive = false;
     //Acknowledgment array
@@ -423,7 +423,7 @@ uint8_t Sd2Card::readData(uint32_t block,
     if(offset_ < offset){
         dma_setup_transfer(DMA1, 
 				DMA_CH3, 
-				&SPI1->regs->DR, 
+				&SPI3->regs->DR, 
 				DMA_SIZE_8BITS, 
 				ack, 
 				DMA_SIZE_8BITS,
@@ -441,10 +441,10 @@ uint8_t Sd2Card::readData(uint32_t block,
     offset_ = offset;
     
     // transfer data
-    dma_setup_transfer(DMA1, DMA_CH2, &SPI1->regs->DR, DMA_SIZE_8BITS, dst, DMA_SIZE_8BITS,
+    dma_setup_transfer(DMA1, DMA_CH2, &SPI3->regs->DR, DMA_SIZE_8BITS, dst, DMA_SIZE_8BITS,
                        (DMA_MINC_MODE | DMA_TRNS_CMPLT | DMA_TRNS_ERR));
     dma_attach_interrupt(DMA1, DMA_CH2, DMAEvent);
-    dma_setup_transfer(DMA1, DMA_CH3, &SPI1->regs->DR, DMA_SIZE_8BITS, ack, DMA_SIZE_8BITS,
+    dma_setup_transfer(DMA1, DMA_CH3, &SPI3->regs->DR, DMA_SIZE_8BITS, ack, DMA_SIZE_8BITS,
                        (/*DMA_MINC_MODE | DMA_CIRC_MODE |*/ DMA_FROM_MEM));             
     dma_set_priority(DMA1, DMA_CH2, DMA_PRIORITY_VERY_HIGH);
     dma_set_priority(DMA1, DMA_CH3, DMA_PRIORITY_VERY_HIGH);
@@ -493,7 +493,7 @@ void Sd2Card::readEnd(void) {
   if (inBlock_) {
       // skip data and crc
 #ifdef SPI_DMA
-        dma_setup_transfer(DMA1, DMA_CH3, &SPI1->regs->DR, DMA_SIZE_8BITS, ack, DMA_SIZE_8BITS,
+        dma_setup_transfer(DMA1, DMA_CH3, &SPI3->regs->DR, DMA_SIZE_8BITS, ack, DMA_SIZE_8BITS,
                            (/*DMA_MINC_MODE | DMA_CIRC_MODE |*/ DMA_FROM_MEM | DMA_TRNS_CMPLT | DMA_TRNS_ERR));  
         dma_attach_interrupt(DMA1, DMA_CH3, DMAEvent);
         dma_set_priority(DMA1, DMA_CH3, DMA_PRIORITY_VERY_HIGH);
@@ -660,7 +660,7 @@ uint8_t Sd2Card::writeData(const uint8_t* src) {
 // send one block of data for write block or write multiple blocks
 uint8_t Sd2Card::writeData(uint8_t token, const uint8_t* src) {
 #ifdef SPI_DMA
-        dma_setup_transfer(DMA1, DMA_CH3, &SPI1->regs->DR, DMA_SIZE_8BITS, (uint8_t *)src, DMA_SIZE_8BITS, (DMA_MINC_MODE |  DMA_FROM_MEM | DMA_TRNS_CMPLT | DMA_TRNS_ERR));
+        dma_setup_transfer(DMA1, DMA_CH3, &SPI3->regs->DR, DMA_SIZE_8BITS, (uint8_t *)src, DMA_SIZE_8BITS, (DMA_MINC_MODE |  DMA_FROM_MEM | DMA_TRNS_CMPLT | DMA_TRNS_ERR));
         dma_attach_interrupt(DMA1, DMA_CH3, DMAEvent);
         dma_set_priority(DMA1, DMA_CH3, DMA_PRIORITY_VERY_HIGH);
         dma_set_num_transfers(DMA1, DMA_CH3, 512);
