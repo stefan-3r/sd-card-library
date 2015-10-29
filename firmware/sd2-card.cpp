@@ -24,7 +24,7 @@
 //#include "spark_wiring_spi.h"
 //#include "spark_wiring_usbserial.h"
 
-/*#include "dma.h"
+#include "dma.h"
 #ifdef SPI_DMA
 bool dmaActive;
 uint8_t mysink[1];
@@ -42,10 +42,10 @@ inline void DMAEvent(){
             break;
     }
 }
-#endif*/
+#endif
 
 //pointer to spi object
-//HardwareSPI SD_SPI(SD_SPI_NUMBER);
+HardwareSPI SD_SPI(SD_SPI_NUMBER);
 
 //------------------------------------------------------------------------------
 // functions for hardware SPI
