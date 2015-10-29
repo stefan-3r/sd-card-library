@@ -45,7 +45,7 @@ inline void DMAEvent(){
 #endif
 
 //pointer to spi object
-HardwareSPI SD_SPI(SD_SPI_NUMBER);
+//HardwareSPI SD_SPI(SD_SPI_NUMBER);
 
 //------------------------------------------------------------------------------
 // functions for hardware SPI
