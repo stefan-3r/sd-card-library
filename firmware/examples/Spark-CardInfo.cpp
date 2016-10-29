@@ -20,7 +20,7 @@
  // include the SD library:
 
 #include "application.h"
-#include "sd-card-library-photon-compat/sd-card-library-photon-compat.h"
+#include "sd-card-library-3r/sd-card-library-3r.h"
 
 // set up variables using the SD utility library functions:
 Sd2Card card;
