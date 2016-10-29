@@ -24,7 +24,7 @@
 //#include "spark_wiring_spi.h"
 //#include "spark_wiring_usbserial.h"
 
-#include "dma.h"
+//#include "dma.h"
 #ifdef SPI_DMA
 bool dmaActive;
 uint8_t mysink[1];
